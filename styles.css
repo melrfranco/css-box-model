@@ -4,19 +4,87 @@
     License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
     margin: 0;
     padding: 0;
     border: 0;
@@ -24,32 +92,51 @@ time, mark, audio, video {
     font: inherit;
     vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
     display: block;
 }
+
 body {
     line-height: 1;
 }
-ol, ul {
+
+ol,
+ul {
     list-style: none;
 }
-blockquote, q {
+
+blockquote,
+q {
     quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
     content: '';
     content: none;
 }
+
 table {
     border-collapse: collapse;
     border-spacing: 0;
 }
 
 /* ----------  GLOBAL/SMALL SCREEN STYLES ---------- */
-:root{
+:root {
     /* Colors from Colormind */
     --red: #CA4657;
     --orange: #DC963F;
@@ -66,55 +153,57 @@ table {
     --blk: #000;
 
     /* Variables for CSS background pattern (from css-pattern.com) */
-    --s: 40px; /* control the size*/
+    --s: 40px;
+    /* control the size*/
     --c1: #eeeeee;
     --c2: #dddddd;
     --c3: #eaeaea;
 
     /* Fonts from Google Fonts */
     --heading-fonts: "Libre Franklin", "Arial Black", sans-serif;
-    --body-fonts: "Shanti", Arial, sans-serif; 
+    --body-fonts: "Shanti", Arial, sans-serif;
 }
 
-body{
+body {
     font-family: var(--body-fonts);
     color: var(--dk-gray);
     box-sizing: border-box;
     line-height: 1.35;
     font-size: 1rem;
     background:
-        repeating-conic-gradient(from 30deg,#0000 0 120deg,var(--c3) 0 180deg) 
-        calc(.5*var(--s)) calc(.5*var(--s)*0.577),
-        repeating-conic-gradient(from 30deg,var(--c1) 0 60deg,var(--c2) 0 120deg,var(--c3) 0 180deg);
+        repeating-conic-gradient(from 30deg, #0000 0 120deg, var(--c3) 0 180deg) calc(.5*var(--s)) calc(.5*var(--s)*0.577),
+        repeating-conic-gradient(from 30deg, var(--c1) 0 60deg, var(--c2) 0 120deg, var(--c3) 0 180deg);
     background-size: var(--s) calc(var(--s)*0.577);
 }
 
 /* SKIP LINK STYLES */
-#skip{
-	position: absolute;
-	left: -10000px;
-	top: auto;
-	width: 1px;
-	height: 1px;
-	overflow: hidden;
+#skip {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
 }
 
-#skip:focus{
+#skip:focus {
     display: block;
     padding: 16px;
-	position: static;
-	width: auto;
-	height: auto;
-	display: block;
-	font-size: 1.1rem;
-	font-weight: bold;
+    position: static;
+    width: auto;
+    height: auto;
+    display: block;
+    font-size: 1.1rem;
+    font-weight: bold;
     background-color: var(--lt-gray);
-	outline: 4px solid var(--red);
+    outline: 4px solid var(--red);
     outline-offset: 0;
 }
 
 /* HEADER/MAIN/FOOTER STYlES */
-header, main, footer{
+header,
+main,
+footer {
     padding: 1rem;
     width: calc(100% - 2rem);
     max-width: calc(900px - 2rem);
@@ -122,60 +211,63 @@ header, main, footer{
     background-color: var(--wht);
 }
 
-main{
+main {
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
 
-footer{
+footer {
     padding: 2rem 1rem;
     text-align: center;
 }
 
 
 /* HEADING STYLES */
-h1, h2, h3{
+h1,
+h2,
+h3 {
     font-family: var(--heading-fonts);
     font-weight: 900;
 }
 
-h1{
+h1 {
     font-size: 2rem;
     margin: 1rem 0;
 }
 
-h2{
+h2 {
     font-size: 1.75rem;
     margin: 0.75rem 0;
 }
 
-h3{
+h3 {
     font-size: 1.55rem;
     margin: 0.75rem 0;
     text-align: center;
 }
 
 /* LINK STYLES */
-a{
+a {
     color: var(--dk-gray);
     text-decoration-thickness: 4px;
 }
 
-a:hover{
+a:hover {
     text-decoration-color: var(--red);
 }
 
-a:focus{
+a:focus {
     outline: 4px solid var(--red);
     outline-offset: 2px;
 }
 
 /* NAVIGATION STYLES */
-nav{
+nav {
     text-align: center;
 }
 
-nav a, #refs a{    
+nav a,
+#refs a {
     display: block;
     padding: 1rem;
     font-family: var(--heading-fonts);
@@ -190,146 +282,158 @@ nav a, #refs a{
     transition: background-color 500ms;
 }
 
-nav a:hover, #refs a:hover{
+nav a:hover,
+#refs a:hover {
     background-color: var(--yellow);
 }
 
 /* CONTAINER STYLES */
-main > section{
+main>section {
     max-width: 700px;
     margin: 0 auto;
 }
 
 /* TEXT STYLES */
-p{
+p {
     width: 100%;
     max-width: 65ch;
     margin: 0 auto;
 }
 
-#box > p, #content p, #padding > p, #border > p, #margin > p, #refs > p{
+#box>p,
+#content p,
+#padding>p,
+#border>p,
+#margin>p,
+#refs>p {
     padding: 0.5rem 0;
 }
 
-strong{
+strong {
     display: inline-block;
     font-family: var(--heading-fonts);
     font-weight: 700;
 }
 
-code{
+code {
     font-family: monospace;
     font-size: 1rem;
     font-weight: 700;
 }
 
 /* IMAGE STYLES */
-img, svg{
+img,
+svg {
     display: block;
     width: 100%;
     height: auto;
 }
 
 /* BOX MODEl SECTION STYLES */
-#box div{
+#box div {
     margin: 1rem auto 2rem;
     max-width: 500px;
 }
 
 /* CONTENT SECTION STYLES */
-#content h2{
+#content h2 {
     padding: 0.5rem;
     width: fit-content;
     background-color: var(--blue);
+    margin: 16px auto;
 }
 
-#content strong{
+#content strong {
     padding: 0 4px;
     background-color: var(--blue);
 }
 
-#content .blue{
+#content .blue {
     background-color: var(--blue);
 }
 
-#content h3{
+#content h3 {
     text-decoration: 4px solid underline var(--blue);
 }
 
 /* PADDING SECTION STYLES */
-#padding h2{
+#padding h2 {
     padding: 0.5rem;
     width: fit-content;
     background-color: var(--green);
 }
 
-#padding strong{
+#padding strong {
     padding: 0 4px;
     background-color: var(--green);
 }
 
-#padding h3{
+#padding h3 {
     text-decoration: 4px solid underline var(--green);
 }
 
 /* TO DO: Add selectors and styles below for the paragraph and link in the padding box demo section */
 
-    /* the style below is included for you to add the link in the padding demo section */
-    /* transition: background-color 500ms; */
+/* the style below is included for you to add the link in the padding demo section */
+/* transition: background-color 500ms; */
 
-#padding a:hover{
+#padding a:hover {
     background-color: var(--blue);
 }
 
 /* BORDER SECTION STYLES */
-#border h2{
+#border h2 {
     padding: 0.5rem;
     width: fit-content;
     background-color: var(--yellow);
 }
 
-#border strong{
+#border strong {
     padding: 0 4px;
     background-color: var(--yellow);
 }
 
-#border h3{
+#border h3 {
     text-decoration: 4px solid underline var(--yellow);
 }
 
-#border section p:first-of-type{
+#border section p:first-of-type {
     margin-bottom: 16px;
 }
 
 /* TO DO: add the styles below one at a time, then save the file and refresh the page in the browser to see the changes */
-#border section p:last-of-type{
+#border section p:last-of-type {
     /* set background color to the dark gray variable */
+    background-color: var(--dk-gray);
     /* set text color to the white variable */
+    color: var(--wht);
     /* add 1rem of padding to all sides */
+    padding: 1rem;
     /* add a 4px solid yellow border (use the variable for the color) */
-    
+    border: 4px solid var(--yellow);
+
     width: calc(100% - 32px);
     max-width: calc(65ch - 32px);
 }
 
 /* MARGIN SECTION STYLES */
-#margin h2{
+#margin h2 {
     padding: 0.5rem;
     width: fit-content;
     background-color: var(--red);
 }
 
-#margin strong{
+#margin strong {
     padding: 0 4px;
     background-color: var(--red);
 }
 
-#margin h3{
+#margin h3 {
     text-decoration: 4px solid underline var(--red);
 }
 
 /* TO DO: add styles here for spacing elements with margin */
-.spacing{
+.spacing {
     background-color: var(--med-gray);
     color: var(--wht);
     padding: 16px;
@@ -339,7 +443,7 @@ img, svg{
 }
 
 /* TO DO: use margin here for centering */
-.center{
+.center {
     display: block;
     background-color: var(--dk-gray);
     padding: 16px;
@@ -347,47 +451,49 @@ img, svg{
     height: auto;
     max-width: calc(334px - 40px);
     border: 4px solid var(--green);
+    margin: 16px auto;
 }
 
 /* RESOURCE SECTION STYLES */
-#refs a{
+#refs a {
     text-align: center;
     max-width: calc(285px - 2rem);
 }
 
 /* ---------- MEDIA QUERIES ---------- */
-@media screen and (min-width: 450px){
+@media screen and (min-width: 450px) {
 
-    h1{
+    h1 {
         text-align: center;
         font-size: 2.5rem;
     }
 
-    nav{
+    nav {
         padding-bottom: 1rem;
     }
 
-    nav ul{
+    nav ul {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 16px;
     }
 
-    nav a{
+    nav a {
         margin: 0;
     }
 }
 
-@media screen and (min-width: 650px){
-    nav ul{
+@media screen and (min-width: 650px) {
+    nav ul {
         grid-template-columns: 1fr 1fr 1fr;
     }
 
-    #box h2, #refs h2{
+    #box h2,
+    #refs h2 {
         text-align: center;
     }
 
-    #refs{
+    #refs {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 16px;
@@ -395,17 +501,18 @@ img, svg{
         padding-bottom: 16px;
     }
 
-    #refs h2, #refs p{
+    #refs h2,
+    #refs p {
         grid-column: 1/-1;
     }
 
-    #refs a{
+    #refs a {
         margin: 0 auto;
     }
 }
 
-@media screen and (min-width: 850px){
-    nav ul{
+@media screen and (min-width: 850px) {
+    nav ul {
         grid-template-columns: repeat(6, auto);
     }
 
